@@ -6,7 +6,7 @@ const moment = require('moment');
 const dotenv = require("dotenv");
 dotenv.config({ path: './config.env' });
 
-const port = 9292;
+const port = process.env.PORT || 9292;
 
 app.use(express.json());
 if (process.env.NODE_ENV === 'development') {
