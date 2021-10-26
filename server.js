@@ -7,17 +7,16 @@ if (process.env.NODE_ENV === 'production') {
     const pool = new Pool(databaseConfig);
     module.exports = pool;
 
-} /*else if (process.env.NODE_ENV === 'development') {
+} else if (process.env.NODE_ENV === 'development') {
     const pool = new Pool({
-        user: process.env.USER,
-        password: process.env.PASSWORD,
-        database: process.env.DATABASE,
-        host: process.env.HOST,
-        port: process.env.PORT
+        user: process.env.LOCAL_USER,
+        password: process.env.LOCAL_PASSWORD,
+        database: process.env.LOCAL_DATABASE,
+        host: process.env.LOCAL_HOST,
+        port: process.env.LOCAL_PORT
     });
     module.exports = pool;
-
-}*/
+}
 // const databaseConfig = { connectionString: process.env.DATABASE_URL };
 // const pool = new Pool(databaseConfig);
 // module.exports = pool;
