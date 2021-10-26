@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
     const pool = new Pool(databaseConfig);
     module.exports = pool;
 
-} else if (process.env.NODE_ENV === 'development') {
+} /*else if (process.env.NODE_ENV === 'development') {
     const pool = new Pool({
         user: process.env.USER,
         password: process.env.PASSWORD,
@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
     });
     module.exports = pool;
 
-}
+}*/
 // const databaseConfig = { connectionString: process.env.DATABASE_URL };
 // const pool = new Pool(databaseConfig);
 // module.exports = pool;

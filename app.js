@@ -148,7 +148,7 @@ app.delete('/person/:id', async(req, res) => {
     }
 });
 
-app.listen(9292, () => {
+app.listen(port, () => {
     console.log(`App is running on port ${port}`);
 });
 
