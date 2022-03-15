@@ -3,15 +3,15 @@ const app = express();
 const pool = require('./server');
 const morgan = require('morgan');
 const moment = require('moment');
-// const dotenv = require("dotenv");
-// dotenv.config({ path: './config.env' });
+const dotenv = require("dotenv");
+dotenv.config({ path: './config.env' });
 
 const port = process.env.PORT || 9292;
 
 app.use(express.json());
-// if (process.env.NODE_ENV === 'development') {
-//     app.use(morgan('dev'));
-// }
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));
+}
 
 //GET ALL 
 app.get('/', (req, res) => {
